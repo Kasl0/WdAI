@@ -1,0 +1,101 @@
+p:nth-child(1) {
+    font-size: large;
+    font-style: normal;
+    color: black;
+    background-color: cornflowerblue;
+    margin-top: 100px;
+}
+
+p:nth-child(2) {
+    width: 100px;
+    height: 50px;
+    overflow: auto;
+    font-size: medium;
+    font-style: oblique;
+    color: aliceblue;
+    background-color: blueviolet;
+    border-top: 2px solid red;
+}
+
+p:nth-child(3) {
+    width: 2345px;
+    height: 104px;
+    font-size: small;
+    font-style: italic;
+    color: blue;
+    background-color: chocolate;
+    padding-top: 50px;
+}
+
+p:nth-child(4) {
+    font-size: smaller;
+    font-style: normal;
+    color: crimson;
+    background-color: forestgreen;
+}
+
+
+
+table.bluetable {
+    width: 20cm;
+}
+
+table.bluetable tr {
+    height: 1.2cm;
+    background-color: rgb(225, 230, 237);
+}
+
+table.bluetable th {
+    background-color: rgb(67, 115, 170);
+}
+
+table.bluetable tr:nth-child(even) {
+    background-color: rgb(209, 223, 240);
+}
+
+
+
+table.graytable, table.graytable th, table.graytable td {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+table.graytable {
+    width: 18cm;
+    margin-top: 0.5cm;
+    margin-bottom: 2cm;
+}
+
+table.graytable tr {
+    height: 1.5cm;
+}
+
+table.graytable th {
+    background-color: rgb(72, 69, 68);
+}
+
+table.graytable td {
+    background-color: rgb(169, 169, 169);
+}
+
+
+img {
+    margin: 1cm;
+}
+
+#zdj1 {
+   float: left;
+}
+
+#zdj2 {
+    float: right;
+ }
+
+
+ul.europe {
+    background-color: lightblue;
+}
+
+ul.asia {
+    background-color: red;
+}
