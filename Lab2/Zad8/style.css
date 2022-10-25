@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(19, 97, 213);
+    transform: skew(0deg, -5deg);
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 0px;
+}
+
+.item1 {
+    color: white;
+    width: 50%;
+}
+
+button {
+    color: white;
+    background-color: rgb(19, 97, 213);
+}
+
+.item2 {
+    color: white;
+    width: 50%;
+}
