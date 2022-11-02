@@ -18,7 +18,7 @@ p:nth-child(2) {
 }
 
 p:nth-child(3) {
-    width: 2345px;
+    width: 1345px;
     height: 104px;
     font-size: small;
     font-style: italic;
@@ -36,34 +36,36 @@ p:nth-child(4) {
 
 
 
-table.bluetable {
+.bluetable {
     width: 20cm;
 }
 
-table.bluetable tr {
+.bluetable tr {
     height: 1.2cm;
-    background-color: rgb(225, 230, 237);
 }
 
-table.bluetable th {
+.bluetable tr {
     background-color: rgb(67, 115, 170);
 }
 
-table.bluetable tr:nth-child(even) {
+.light tr {
     background-color: rgb(209, 223, 240);
 }
 
-
-
-table.graytable, table.graytable th, table.graytable td {
-    border: 1px solid black;
-    border-spacing: 0px;
+.light tr:nth-child(even) {
+    background-color: rgb(225, 230, 237);
 }
 
-table.graytable {
+
+.graytable, .graytable th, .graytable td {
+    border: 1px solid black;
+}
+
+.graytable {
     width: 18cm;
     margin-top: 0.5cm;
     margin-bottom: 2cm;
+    border-spacing: 0px
 }
 
 table.graytable tr {
@@ -79,23 +81,51 @@ table.graytable td {
 }
 
 
-img {
+
+#opis {
     margin: 1cm;
 }
 
 #zdj1 {
-   float: left;
+    float: left;
+    margin: 0 1cm 0.5cm 0;
 }
 
-#zdj2 {
+#zdj2  {
     float: right;
- }
+    margin: 0.5cm 0 0.5cm 1cm;
+}
+
+
+
+#zdjecia {
+    clear: both;
+}
+
+#zdjecia img{
+    width: 10%;
+}
+
+#zdj4 {
+    position: relative;
+    left: 200px;
+}
+
+#zdj5 {
+    position: relative;
+    right: 200px;
+}
+
 
 
 ul.europe {
     background-color: lightblue;
+    position: relative;
+    top: 100px;
 }
 
 ul.asia {
     background-color: red;
+    position: relative;
+    bottom: 100px;
 }
