@@ -1,0 +1,40 @@
+h1 {
+    color: rgb(61, 102, 140);
+    border-top: 1px dashed gray;
+    border-left: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    margin-bottom: 0;
+    padding: 3px;
+}
+
+.intro {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left: 1px dashed gray;
+    padding: 3px;
+    font-size: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: repeat(3, 280px);
+}
+
+figure {
+    margin: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 3px #88888861;
+    padding: 3px;
+}
