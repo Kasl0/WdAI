@@ -1,0 +1,39 @@
+body {
+  font: 1.2em Helvetica, Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+section {
+  width: 90%;
+  max-width: 700px;
+  border: 3px solid #717cb5;
+  border-radius: 2px;
+  padding: 0px;
+}
+
+.box {
+  border-top: 2px dotted rgb(96, 139, 168);
+  border-left: 2px dotted rgb(96, 139, 168);
+  display: flex;
+  flex-direction: column;
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96, 139, 168);
+  border-radius: 5px;
+  background-color: rgba(96, 139, 168, .2);
+}
+
+.box > div:nth-child(even) {
+  text-align: center;
+  width: 50px;
+}
+
+.selected {
+  text-align: center;
+  margin-left: 65px;
+  width: 50px;
+}
+    
