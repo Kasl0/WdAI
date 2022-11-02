@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 5px;
+}
+
+.red {
+    background-color: red;
+    width: 70px;
+}
+
+.blue {
+    background-color: aqua;
+    width: 200px;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 280px;
+}
