@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 200px auto 150px;
+    grid-template-rows: 3cm 1.5cm 6cm 1.5cm;
+    background-color: #c0c0c0;
+    padding: 10px;
+    grid-template-areas:
+    "top top top"
+    "menu menu menu"
+    "lewa zawartosc prawa"
+    "stopka stopka stopka";
+}
+
+.box {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.top {
+    grid-area: top;
+    background-color: rgba(114, 114, 114, 0.8);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 180px auto 150px;
+    grid-template-areas:
+    "logo empty empty";
+}
+
+.logo {
+    grid-area: logo;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.lewa {
+    grid-area: lewa;
+}
+
+.zawartosc {
+    grid-area: zawartosc;
+}
+
+.prawa {
+    grid-area: prawa;
+    border: 4px solid black;
+}
+
+.stopka {
+    grid-area: stopka;
+    background-color: rgba(114, 114, 114, 0.8);
+}
+
+
+
+@media (max-width: 700px) {
+    .layout {
+        grid-template-columns: 200px auto;
+        grid-template-rows: 3cm 1.5cm 6cm 3cm 1.5cm;
+        grid-template-areas:
+        "top top"
+        "menu menu"
+        "lewa zawartosc"
+        "prawa prawa"
+        "stopka stopka";
+    }
+}
+
+@media (max-width: 500px) {
+    .layout {
+        grid-template-columns: auto;
+        grid-template-rows: 3cm 1.5cm 3cm 6cm 3cm 1.5cm;
+        grid-template-areas:
+        "top"
+        "menu"
+        "lewa"
+        "zawartosc"
+        "prawa"
+        "stopka";
+    }
+    .logo {
+        display: none;
+    }
+}
