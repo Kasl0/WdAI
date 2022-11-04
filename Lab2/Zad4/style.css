@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: linear-gradient(rgba(51, 168, 218, 0.5), rgba(51, 168, 218, 0.5)),
+    url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    background-color: rgb(51, 168, 218);
+}
+
+header > h1 {
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.pages {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pages > div {
+    color: white;
+    padding: 21px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    bottom: 3px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /*top: 66px;*/
+    color: rgb(51, 168, 218);
+    background-color: white;
+    min-width: 130px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content > p {
+    border: 1px solid rgb(51, 168, 218);
+    padding: 7px 12px;
+    margin: 0;
+}
+
+.account {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+}
+
+.account > div {
+    margin: 11px 5px;
+    border-radius: 30px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.account > div:nth-child(2):hover, .account > div:nth-child(1) {
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(51, 168, 218);
+}
+
+.account > div:nth-child(1):hover, .account > div:nth-child(2) {
+    color: rgb(51, 168, 218);
+    border: 1px solid rgb(51, 168, 218);
+    background-color: white;
+}
