@@ -1,0 +1,73 @@
+:root {
+    --primary-color: rgb(94, 198, 198);
+    --secondary-color: white;
+}
+
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+
+section {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: max-content auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+nav > button {
+    height: max-content;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(45, 82, 138);
+    background-color: var(--secondary-color);
+    border: 1px solid white;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+nav > button:hover {
+    --primary-color: white;
+    --secondary-color: rgb(94, 198, 198);
+}
+
+nav > button > p {
+    margin: 0;
+    padding: 0;
+    padding-left: 0.6em;
+    text-align: left;
+    width: 10em;
+    transition: visibility 0.2s, opacity 0.2s, width 0.2s linear;
+}
+
+.notifications {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5em 0.7em;
+    border-radius: 2em;
+}
+
+article {
+    padding: 1em;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+@media (max-width: 800px) {
+    nav > button > p {
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+    }
+}
