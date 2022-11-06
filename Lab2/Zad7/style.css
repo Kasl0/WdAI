@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(29, 50, 87)
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 1em;
+    background-color: var(--primary-color);
+    height: 40em;
+}
+
+.stream {
+    height: 100%;
+}
+
+.fat {
+    display: none;
+}
+
+.camera {
+    border-radius: 2em;
+    position: absolute;
+    top: -16em;
+    left: -10em;
+    scale: 20%;
+}
+
+.sound {
+    position: absolute;
+    bottom: 0;
+    left: 2em;
+    scale: 50%;
+}
+
+.interactions {
+    display: flex;
+    position: absolute;
+    scale: 10%;
+    bottom: -18em;
+}
+
+.interactions > img {
+    padding: 7em;
+    cursor: pointer;
+}
+
+
+@media (max-width: 780px) {
+    .stream {
+        border-radius: 1em;
+    }
+
+    .fit {
+        display: none;
+    }
+
+    .fat {
+        display: block;
+    }
+
+    .camera {
+        top: -8.6em;
+        left: -9.7em;
+        scale: 29%;
+    }
+
+    section {
+        height: 80vw;
+    }
+}
