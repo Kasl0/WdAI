@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: minmax(14em, max-content) auto max-content;
+    grid-template-rows: max-content max-content auto max-content;
+    grid-template-areas:
+    "header header header"
+    "sidebar navigation ads"
+    "sidebar main ads"
+    "footer footer footer";
+}
+
+body > * {
+    border: 2px solid red;
+    border-radius: 0.5em;
+}
+
+header {
+    grid-area: header;
+    padding: 0.5em;
+}
+
+nav {
+    grid-area: navigation;
+    padding: 0.5em;
+}
+
+main {
+    grid-area: main;
+    padding: 0.5em;
+    min-height: 200vh;
+}
+
+.entry {
+    padding: 2em;
+    margin: 2em;
+    background-color: antiquewhite;
+    transform: skewX(-15deg);
+}
+
+.entry > * {
+    transform: skewX(15deg);
+}
+
+.entry > img {
+    float: left;
+    shape-outside: circle(50%);
+    margin-right: 2em;
+}
+
+.entry > h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    aspect-ratio: 2/1;
+    background-image: url(form.PNG);
+    background-size: cover;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.skew {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 0 -7em;
+    transform: skewX(-15deg);
+}
+
+.content {
+    height: 10%;
+    transform: skewX(15deg);
+    color: rgb(179, 56, 255);
+    padding-left: max(6.5em, 25%);;
+    padding-top: 5%;
+}
+
+.content > h1 {
+    margin: 3%;
+    padding: 0;
+    font-size: 2vw;
+}
+
+.stdin {
+    font-size: 1vw;
+    width: 60%;
+    border: 0;
+    margin: 3% 0;
+    padding: 3%;
+}
+
+.checkdiv {
+    margin: 5% 0;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    margin: 3%;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 20%;
+    left: -2em;
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked ~ .checkmark {
+    background-color: rgb(179, 56, 255);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    top: 0.25em;
+    left: 0.25em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: white;
+}
+
+label {
+    font-size: 1vw;
+    padding: 1em;
+    color: rgb(88, 88, 88);
+    cursor: pointer;
+}
+
+.content > button {
+    color: white;
+    margin: 3% 0;
+    padding: 2% 4%;
+    border-radius: 2em;
+    border: 1px solid rgb(179, 56, 255);
+    background-color: rgb(179, 56, 255);
+    cursor: pointer;
+}
+
+.content > button:active {
+    color: rgb(179, 56, 255);
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 0.5em;
+}
+
+.card {
+    position: fixed;
+    font-size: 1.3em;
+}
+
+.links {
+    display: flex;
+}
+
+.links > a {
+    padding: 0.1em;
+}
+
+
+.ads {
+    grid-area: ads;
+    padding: 0.5em;
+}
+
+footer {
+    grid-area: footer;
+    padding: 0.5em;
+}
+
+
+
+@media (max-width: 670px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: max-content max-content auto max-content max-content max-content;
+        grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "sidebar"
+        "ads"
+        "footer";
+    }
+    .card {
+        position: static;
+    }
+    .stdin {
+        font-size: 2vw;
+    }
+    label {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 670px) and (max-width: 940px) {
+    body {
+        grid-template-columns: minmax(14em, max-content) auto;
+        grid-template-rows: max-content max-content auto max-content;
+        grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "sidebar main"
+        "ads footer";
+    }
+    .stdin {
+        font-size: 1.5vw;
+    }
+}
