@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(243, 243, 243);
+    font-family: Arial, sans-serif;
+    color: rgb(118, 118, 118);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 2em;
+}
+
+.card {
+    box-sizing: content-box;
+    width: 20em;
+    height: 31em;
+    background-color: white;
+    box-shadow: 0.5em 0.5em 0.5em #7b7b7b61;
+}
+
+.cardcontainer {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+}
+
+.img {
+    width: 20em;
+    height: 13.3em;
+    background: linear-gradient(rgba(255, 152, 17, 0.6), rgba(255, 152, 17, 0.6)), 
+    url(wycieczka.jpg) no-repeat left top fixed;
+    background-size: 23em;
+}
+
+.content {
+    margin-top: -1.5em;
+    background-color: white;
+    transform: skewY(-7deg);
+}
+
+.content > * {
+    transform: skewY(7deg);
+}
+
+.title > h1 {
+    padding: 0.4em;
+    margin: 0;
+    font-size: 1.7em;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(255, 152, 17, 0.7);
+}
+
+.title > h1:nth-child(1) {
+    position: absolute;
+    bottom: 1.6em;
+    right: 0.5em;
+}
+
+.title > h1:nth-child(2) {
+    position: absolute;
+    bottom: 0em;
+    right: 0.5em;
+}
+
+.content > p {
+    margin: 0 4em;
+    padding: 1em;
+    border-top: 1px solid gray;
+    color: rgb(63, 63, 63);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#first {
+    border-top: 0;
+    padding-top: 4em;
+}
+
+.card:hover .cardcontainer{
+    transform:rotateY(180deg);
+}
+
+.back{
+    transform: rotateY(180deg);
+}
