@@ -28,11 +28,19 @@ body {
     backface-visibility: hidden;
 }
 
-.img {
+.imgone {
     width: 20em;
     height: 13.3em;
     background: linear-gradient(rgba(255, 152, 17, 0.6), rgba(255, 152, 17, 0.6)), 
-    url(wycieczka.jpg) no-repeat left top fixed;
+    url(wycieczka.jpg) no-repeat left top;
+    background-size: 23em;
+}
+
+.imgtwo {
+    width: 20em;
+    height: 13.3em;
+    background: linear-gradient(rgba(72, 237, 105, 0.6), rgba(72, 237, 105, 0.6)), 
+    url(wycieczka2.jpg) no-repeat left top;
     background-size: 23em;
 }
 
@@ -87,4 +95,30 @@ body {
 
 .back{
     transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20em;
+    height: 31em;
+    color: white;
+    background-color: rgba(255, 152, 17, 0.7);
+    text-align: center;
+}
+
+.card-back-text {
+    margin-top: 9em;
+}
+
+.card-back-price {
+    margin-top: 0.5em;
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.card-back-book {
+    margin-top: 5em;
+    padding: 1em 2em;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2em;
 }
