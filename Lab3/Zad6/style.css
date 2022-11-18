@@ -1,0 +1,77 @@
+body {
+    background-color: aliceblue;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid lightgray;
+    padding: 2em;
+    margin: 1em;
+}
+
+.info > h1 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.info> h2 {
+    margin: 0.5em 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.contact > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: minmax(auto, 20em) minmax(auto, 20em) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "nameLabel phoneLabel ."
+    "name phone submit";
+    gap: 0 1em;
+    background-color: white;
+    border: 2px solid lightgray;
+    padding: 2em;
+    margin: 1em;
+}
+
+label {
+    color: gray;
+    font-size: 0.8em;
+}
+
+#nameLabel {
+    grid-area: nameLabel;
+}
+
+#phoneLabel {
+    grid-area: phoneLabel;
+}
+
+input {
+    padding: 0.8em;
+}
+
+#name {
+    grid-area: name;
+}
+
+#phone {
+    grid-area: phone;
+}
+
+#submitButton {
+    grid-area: submit;
+    color: white;
+    background-color: green;
+    border-color: green;
+    border-radius: 5px;
+    width: 15em;
+}
