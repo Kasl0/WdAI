@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+body > h1 {
+    margin-bottom: 1.5em;
+}
+
+#secret {
+    color: rgb(92, 171, 228);
+    cursor: pointer;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.slider > * {
+    justify-self: center;
+    align-self: center;
+}
+
+.arrow {
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: start;
+    margin-top: 4em;
+    z-index: 1;
+}
+
+.cardContainer {
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7em;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 1s, opacity 0.5s;
+}
+
+#card3 {
+    transform: translateX(-110%);
+    opacity: 0;
+}
+
+#card2 {
+    transform: translateX(10%);
+    opacity: 0;
+}
+
+.rounded {
+    overflow: hidden;
+    width: 10em;
+    height: 10em;
+    border-radius: 10em;
+    border: 5px solid white;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    align-self: center;
+}
+
+.name {
+    color: rgb(92, 171, 228);
+    margin-bottom: 0;
+}
+
+.job {
+    color: gray;
+    margin-top: 0.5em;
+}
+
+.description {
+    margin-top: 0.5em;
+    color: gray
+}
+
+#rand {
+    color: white;
+    background-color: rgb(65, 92, 112);
+    border: 1px solid rgb(65, 92, 112);
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.end {
+    font-size: 10em;
+    color: rgb(92, 171, 228);
+    margin-top: 0.8em;
+    margin-bottom: 0.1em;
+    padding: 0;
+}
