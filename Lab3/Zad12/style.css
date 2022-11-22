@@ -87,8 +87,9 @@ body * {
 
 #gameover {
     display: none;
-    top: 35vh;
-    left: 45vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     background-color: rgb(90, 10, 43);
     text-align: center;

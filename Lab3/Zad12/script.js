@@ -20,8 +20,8 @@ function boardClick() {
 }
 
 function circleMove(e) {
-    circle.style.left = e.clientX-45 + "px";
-    circle.style.top = e.clientY-45 + "px";
+    circle.style.left = e.pageX-45 + "px";
+    circle.style.top = e.pageY-45 + "px";
 }
 
 function zombieClick(e) {
