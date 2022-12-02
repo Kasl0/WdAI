@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit($event)">
+    <p>Imię: <input type="text" name="firstname"></p>
+    <p>Nazwisko: <input type="text" name="surname"></p>
+    <p>Tytuł filmu: <input type="text" name="title"></p>
+    <button type="submit"> Wypisz </button>
+</form>
+
+<div [hidden] = "!submitted">
+    <p>Imię: {{firstname}}</p>
+    <p>Nazwisko: {{surname}}</p>
+    <p>Tytuł filmu: {{title}}</p>
+</div>
+
+<br>
+<p> 2+2 = {{2+2}} </p>
+<p> firstname.length = {{firstname.length}} </p>
+<p> firstname.toUpperCase() = {{firstname.toUpperCase()}} </p>
