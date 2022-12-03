@@ -1,0 +1,19 @@
+{
+    "topics": [
+        {
+            "title": "The Basics",
+            "shortened": "Core Angular basics you have to know",
+            "full": "Core Angular - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequuntur libero beatae tempora quod a impedit? Rerum aperiam eum ea fugiat sit expedita dolor consequuntur alias ipsa, esse sapie"
+        },
+        {
+            "title": "Components",
+            "shortened": "Components are a core concept for building Angular UIs and apps",
+            "full": "Components are - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequuntur libero beatae tempora quod a impedit? Rerum aperiam eum ea fugiat sit expedita dolor consequuntur alias ipsa, esse sapie"
+        },
+        {
+            "title": "Events",
+            "shortened": "Events are important in Angular",
+            "full": "Events are - Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequuntur libero beatae tempora quod a impedit? Rerum aperiam eum ea fugiat sit expedita dolor consequuntur alias ipsa, esse sapie"
+        }
+    ]
+}

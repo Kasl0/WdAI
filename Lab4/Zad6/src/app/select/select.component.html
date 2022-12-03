@@ -1,0 +1,11 @@
+<div class="box shadow">
+    <h1> Wybierz Temat </h1>
+    <div class="topics-container">
+        <div class="box card" *ngFor="let topic of topics">
+            <h3> {{ topic.title }} </h3>
+            <p> {{ topic.shortened }} </p>
+            <button [title]="topic.title" [value]="topic.full" (click)="chooseTopic($event)" > Learn More </button>
+        </div>
+    </div>
+    
+</div>

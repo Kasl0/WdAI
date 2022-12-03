@@ -1,0 +1,14 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    padding: 1.5em;
+    margin: 1em;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.shadow {
+    box-shadow: 3px 3px 5px lightgray;
+}
