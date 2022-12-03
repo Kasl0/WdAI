@@ -1,0 +1,22 @@
+<select (change)="brandSelect($event)">
+    <option [hidden]="true"> Wybierz markę auta </option>
+    <option *ngFor="let brand of brands"> {{ brand }} </option>
+</select>
+
+<select [hidden] = "brandSelected==''" (change)="modelSelect($event)">
+    <option [hidden]="true"> Wybierz model auta </option>
+    <option *ngFor="let model of models"> {{ model }} </option>
+</select>
+
+<select [hidden] = "modelSelected==''" (change)="colorSelect($event)">
+    <option [hidden]="true"> Wybierz kolor auta </option>
+    <option *ngFor="let color of colors" [ngStyle]="{'background-color': color, 'color': color}"> {{ color }} </option>
+</select>
+
+<div [hidden] = "colorSelected==''">
+    <h2> Wybrany samochód: </h2>
+    <p> Marka: {{brandSelected}} </p>
+    <p> Model: {{modelSelected}} </p>
+    <p> Kolor: {{colorSelected}} </p>
+    <p> Wyposażenie: {{interiorSelected}} </p>
+</div>

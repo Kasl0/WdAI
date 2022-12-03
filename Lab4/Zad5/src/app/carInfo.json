@@ -1,0 +1,40 @@
+{
+    "cars": [
+        {
+            "brand": "Honda",
+            "model": "CR-V",
+            "colors": ["gray", "brown", "white"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        },
+        {
+            "brand": "Ford",
+            "model": "Focus",
+            "colors": ["black"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        },
+        {
+            "brand": "Ford",
+            "model": "Fiesta",
+            "colors": ["gray", "red", "green"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        },
+        {
+            "brand": "Ford",
+            "model": "Kuga",
+            "colors": ["black", "brown", "white"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        },
+        {
+            "brand": "Toyota",
+            "model": "Yaris",
+            "colors": ["white", "yellow"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        },
+        {
+            "brand": "Toyota",
+            "model": "Rav4",
+            "colors": ["purple", "pink", "white"],
+            "interior": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sunt amet architecto, sint itaque nostrum nulla vitae id enim expedita exercitationem fuga vel"
+        }
+    ]
+}
