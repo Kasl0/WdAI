@@ -15,9 +15,9 @@
             <p> {{ trip.description }} </p>
             <div class="selectContainer">
                 <div class="select">
-                    <button (click)="resign(trip, $event)" [disabled]="trip.counter == 0">-</button>
+                    <button (click)="resign(trip)" [disabled]="trip.counter == 0">-</button>
                     <div> {{ trip.counter }} </div>
-                    <button (click)="reserve(trip, $event)" [disabled]="trip.counter == trip.max">+</button>
+                    <button (click)="reserve(trip)" [disabled]="trip.counter == trip.max">+</button>
                 </div>
                 <p class="msg" [ngStyle]="{'color': trip.max - trip.counter > 3 ? 'rgb(118, 118, 118)' : 'red' }">
                     {{
@@ -29,6 +29,7 @@
                     }}
                 </p>
             </div>
+            <button class="remove" (click)="remove(trip)"> Usuń </button>
         </div>
     </div>
 </div>

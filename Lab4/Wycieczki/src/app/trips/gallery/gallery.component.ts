@@ -17,6 +17,12 @@ export class GalleryComponent {
 
   constructor(service: LoadTripsService) {
     this.trips = service.getTrips();
+    this.updateMinMax();
+  }
+
+  updateMinMax():void {
+    this.minPrice = Number.MAX_SAFE_INTEGER;
+    this.maxPrice = 0;
 
     for (let trip of this.trips) {
       this.minPrice = Math.min(this.minPrice, trip.price);
@@ -24,18 +30,31 @@ export class GalleryComponent {
     }
   }
 
-  reserve(trip: Trip, event: any):void {
+  reserve(trip: Trip):void {
     trip.counter++;
     this.summaryCount.emit(1);
   }
 
-  resign(trip: Trip, event: any):void {
+  resign(trip: Trip):void {
     trip.counter--;
     this.summaryCount.emit(-1);
   }
 
   getRemaining(trip: Trip):string {
     return String(trip.max - trip.counter);
+  }
+
+  remove(trip: Trip):void {
+    for (let i=0 ; i < this.trips.length ; i++) {
+      if (this.trips[i] == trip) {
+
+        this.summaryCount.emit(-trip.counter);
+        this.trips.splice(i, 1);
+        this.updateMinMax();
+        break;
+        
+      }
+    }
   }
 
 }
