@@ -1,0 +1,87 @@
+{
+    "trips": [
+        {
+            "name": "Łódź sightseeing",
+            "country": "Poland",
+            "start": "01-01-2023",
+            "end": "03-01-2023",
+            "price": "200",
+            "currency": "zł",
+            "max": "40",
+            "description": "An unforgettable tour of the fourth largest city in Poland. You will see the terrible living conditions of the local people",
+            "link": "https://wiadomosci-lodz.pl/wp-content/webpc-passthru.php?src=https://wiadomosci-lodz.pl/wp-content/uploads/2019/05/kamienica-rewolucji-lodz-1-770x540.jpg"
+        },
+
+        {
+            "name": "Visit Kaslo today",
+            "country": "USA",
+            "start": "10-02-2023",
+            "end": "20-02-2023",
+            "price": "8000",
+            "currency": "zł",
+            "max": "10",
+            "description": "Become familiar with some of Kaslo's attractive characteristics. This is only a starting point to all Kaslo has to offer!",
+            "link": "https://www.castlegarnews.com/wp-content/uploads/2021/12/27588383_web1_211028-KWS-Kaslo-council-sign_1-1024x683.jpg"
+        },
+
+        {
+            "name": "Sibir departure",
+            "country": "Russia",
+            "start": "24-12-2022",
+            "end": "...the end",
+            "price": "10",
+            "currency": "zł",
+            "max": "10000",
+            "description": "Are you tired of your life? Do you want to change the world? Help colonize the virgin lands of Siberia",
+            "link": "https://m.natemat.pl/2fe742969330c323b0577fa489ee1187,1500,0,0,0.webp"
+        },
+
+        {
+            "name": "Świebodzin pilgrimage",
+            "country": "Poland",
+            "start": "01-04-2023",
+            "end": "05-04-2023",
+            "price": "100",
+            "currency": "zł",
+            "max": "100",
+            "description": "A true Catholic must make a pilgrimage to this holy place at least once in his life. Tesco store nearby",
+            "link": "https://www.podrozepoeuropie.pl/system/gallery/images/images/000/009/451/large/Figura-Jezusa-w-Swiebodzinie_2.JPG"
+        },
+
+        {
+            "name": "Sosnowiec metropolis",
+            "country": "Poland",
+            "start": "01-07-2023",
+            "end": "31-07-2023",
+            "price": "4000",
+            "currency": "zł",
+            "max": "20",
+            "description": "The city of dreams and desires. We can only imagine what's going on there. Time to change that",
+            "link": "https://bi.im-g.pl/im/8e/24/1a/z27411342AMP,Przebudowa-ul--Malachowskiego-w-Sosnowcu-potrwa-dl.jpg"
+        },
+
+        {
+            "name": "llanfairpwllgwyng...",
+            "country": "UK",
+            "start": "13-03-2023",
+            "end": "14-03-2023",
+            "price": "6000",
+            "currency": "zł",
+            "max": "15",
+            "description": "The longest town name in Europe. What does it even mean? Time to visit this place!",
+            "link": "https://i.ytimg.com/vi/DUGN-12HHwQ/maxresdefault.jpg"
+        },
+
+        {
+            "name": "Storm Area 51 with us!",
+            "country": "USA",
+            "start": "12-04-2025",
+            "end": "12-04-2025",
+            "price": "7000",
+            "currency": "zł",
+            "max": "200",
+            "description": "Would you like to see an alien and discover the truth? Finally, the time has come",
+            "link": "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2019/09/area-51-feature.jpg"
+        }
+    ]
+}

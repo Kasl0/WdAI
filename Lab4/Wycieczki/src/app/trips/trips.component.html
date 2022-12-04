@@ -1,0 +1,6 @@
+<div class="box counter" [ngStyle]="{'background-color': counter > 10 ? 'green' : 'red' }">
+    <div> Zarezerwowanych łącznie: </div> 
+    <div> {{ counter }} </div>
+</div>
+
+<app-gallery (summaryCount)="updateCounter($event)"></app-gallery>
