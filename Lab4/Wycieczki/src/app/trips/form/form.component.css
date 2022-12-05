@@ -1,0 +1,13 @@
+form {
+    padding: 2em;
+    margin: 2em;
+    width: 16.3em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.5em #7b7b7b61;
+}
+
+input {
+    margin-bottom: 1em;
+    width: 70%;
+}

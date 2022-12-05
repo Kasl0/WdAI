@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { LoadTripsService } from '../../load-trips.service';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Trip } from '../../tripClass';
 
 @Component({
@@ -9,14 +8,14 @@ import { Trip } from '../../tripClass';
 })
 export class GalleryComponent {
 
-  trips: Trip[];
+  @Input() trips: Trip[] = [];
+  
+  @Output() summaryCount: EventEmitter<number> = new EventEmitter<number>();
+
   minPrice: number = Number.MAX_SAFE_INTEGER;
   maxPrice: number = 0;
 
-  @Output() summaryCount: EventEmitter<number> = new EventEmitter<number>();
-
-  constructor(service: LoadTripsService) {
-    this.trips = service.getTrips();
+  constructor() {
     this.updateMinMax();
   }
 

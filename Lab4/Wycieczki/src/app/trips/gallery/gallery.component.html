@@ -2,7 +2,7 @@
     <div class="card" *ngFor="let trip of trips"
     [ngStyle]="{'border': trip.price == minPrice ? '2px solid red' : ( trip.price == maxPrice ? '2px solid green' : '2px solid white') }">
         <div class="circle">
-            <img [src]="trip.link" alt="Zdjęcie wycieczki">
+            <img [src]="trip.link">
         </div>
         <div class="content">
             <h1> {{ trip.name | uppercase }} </h1>
