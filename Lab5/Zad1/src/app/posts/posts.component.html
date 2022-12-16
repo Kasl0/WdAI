@@ -1,0 +1,24 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+    <label for="user"> User Id: </label> <br>
+    <input name="user" formControlName="user"> <br>
+
+    <label for="post"> Post Id: </label>  <br>
+    <input name="post" formControlName="post"> <br>
+    
+    <label for="title"> Title: </label> <br>
+    <input name="title" formControlName="title"> <br>
+
+    <label for="content"> Content: </label> <br>
+    <input name="content" formControlName="content"> <br>
+
+    <button [disabled]="!modelForm.valid" type="submit"> Opublikuj </button>
+</form>
+
+<div class="post-container" *ngFor="let post of postList">
+    <div class="post">
+        <p class="user-id"> {{ post.userId }} </p>
+        <p class="post-id"> {{ post.id }} </p>
+        <p class="post-title"> {{ post.title }} </p>
+        <p class="post-content"> {{ post.body }} </p>
+    </div>
+</div>

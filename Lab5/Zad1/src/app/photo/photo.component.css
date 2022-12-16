@@ -1,0 +1,31 @@
+.photo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    width: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-container .photo p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+  
+.photo-container .photo .album-id {
+    font-weight: bold;
+    color: #333;
+}
+  
+.photo-container .photo .photo-id {
+    font-style: italic;
+    color: #666;
+}
+  
+.photo-container .photo .photo-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+<div class="photo-container" *ngFor="let photo of photoList">
+    <div [routerLink]="'/photo/' + photo.id" routerLinkActive="active" class="photo">
+        <img class="image" [src]="photo.thumbnailUrl" alt="Nie załadowano zdjęcia">
+        <p class="album-id"> {{ photo.albumId }} </p>
+        <p class="photo-id"> {{ photo.id }} </p>
+        <p class="photo-title"> {{ photo.title }} </p>
+    </div>
+</div>
