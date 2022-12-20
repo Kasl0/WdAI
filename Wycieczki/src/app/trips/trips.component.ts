@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadTripsService } from '../load-trips.service';
+import { TripsService } from '../trips.service';
 import { Trip } from '../tripClass';
 
 @Component({
@@ -10,10 +10,17 @@ import { Trip } from '../tripClass';
 export class TripsComponent {
 
   counter: number = 0;
-  tripList: Trip[];
+  tripList: Trip[] = [];
 
-  constructor(service: LoadTripsService) {
-    this.tripList = service.getTrips();
+  constructor(private service: TripsService) {
+
+    this.service.getTrips().subscribe(trips => {
+      this.tripList = trips;
+
+      for (let trip of this.tripList) {
+        trip.counter = 0;
+      }
+    });
   }
 
   updateCounter(n: number) {
@@ -21,6 +28,10 @@ export class TripsComponent {
   }
 
   addTrip(newTrip: Trip) {
-    this.tripList.push(newTrip);
+    this.service.addTrip(newTrip);
+  }
+
+  removeTrip(trip: Trip) {
+    this.service.removeTrip(trip);
   }
 }

@@ -1,5 +1,7 @@
 export class Trip {
 
+    key?: string;
+
     name: string;
     country: string;
     start: string;
@@ -9,7 +11,7 @@ export class Trip {
     max: number;
     description: string;
     link: string;
-
+    available: number;
     counter: number = 0;
 
     constructor(name: string, country: string, start: string, end: string, price: number, currency:string, max: number, description: string, link: string) {
@@ -22,5 +24,6 @@ export class Trip {
         this.max = max;
         this.description = description;
         this.link = link;
+        this.available = max;
     }
 }

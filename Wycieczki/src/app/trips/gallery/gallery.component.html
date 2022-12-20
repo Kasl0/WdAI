@@ -19,12 +19,12 @@
                     <div> {{ trip.counter }} </div>
                     <button (click)="reserve(trip)" [disabled]="trip.counter == trip.max">+</button>
                 </div>
-                <p class="msg" [ngStyle]="{'color': trip.max - trip.counter > 3 ? 'rgb(118, 118, 118)' : 'red' }">
+                <p class="msg" [ngStyle]="{'color': trip.available - trip.counter > 3 ? 'rgb(118, 118, 118)' : 'red' }">
                     {{
-                        trip.counter == 0 ? "Dostępne wszystkie miejsca" :
-                        (trip.max - trip.counter > 4 ? "Zostało " + getRemaining(trip) + " miejsc" :
-                        (trip.max - trip.counter > 1 ?  "Zostały " + getRemaining(trip) + " miejsca" :
-                        (trip.max - trip.counter == 1 ? "Zostało 1 miejsce" :
+                        trip.available - trip.counter == trip.max ? "Dostępne wszystkie miejsca" :
+                        (trip.available - trip.counter > 4 ? "Zostało " + getRemaining(trip) + " miejsc" :
+                        (trip.available - trip.counter > 1 ?  "Zostały " + getRemaining(trip) + " miejsca" :
+                        (trip.available - trip.counter == 1 ? "Zostało 1 miejsce" :
                         "Brak miejsc" )))
                     }}
                 </p>

@@ -5,11 +5,12 @@
             "country": "Poland",
             "start": "01/01/2023",
             "end": "03/01/2023",
-            "price": "200",
+            "price": 200,
             "currency": "zł",
-            "max": "40",
+            "max": 40,
             "description": "An unforgettable tour of the fourth largest city in Poland. You will see the terrible living conditions of the local people",
-            "link": "https://wiadomosci-lodz.pl/wp-content/webpc-passthru.php?src=https://wiadomosci-lodz.pl/wp-content/uploads/2019/05/kamienica-rewolucji-lodz-1-770x540.jpg"
+            "link": "https://wiadomosci-lodz.pl/wp-content/webpc-passthru.php?src=https://wiadomosci-lodz.pl/wp-content/uploads/2019/05/kamienica-rewolucji-lodz-1-770x540.jpg",
+            "available": 40
         },
 
         {
@@ -17,11 +18,12 @@
             "country": "USA",
             "start": "10/02/2023",
             "end": "20/02/2023",
-            "price": "8000",
+            "price": 8000,
             "currency": "zł",
-            "max": "10",
+            "max": 10,
             "description": "Become familiar with some of Kaslo's attractive characteristics. This is only a starting point to all Kaslo has to offer!",
-            "link": "https://www.castlegarnews.com/wp-content/uploads/2021/12/27588383_web1_211028-KWS-Kaslo-council-sign_1-1024x683.jpg"
+            "link": "https://www.castlegarnews.com/wp-content/uploads/2021/12/27588383_web1_211028-KWS-Kaslo-council-sign_1-1024x683.jpg",
+            "available": 10
         },
 
         {
@@ -29,11 +31,12 @@
             "country": "Russia",
             "start": "24/12/2022",
             "end": "01/01/2099",
-            "price": "10",
+            "price": 10,
             "currency": "zł",
-            "max": "10000",
+            "max": 10000,
             "description": "Are you tired of your life? Do you want to change the world? Help colonize the virgin lands of Siberia",
-            "link": "https://m.natemat.pl/2fe742969330c323b0577fa489ee1187,1500,0,0,0.webp"
+            "link": "https://m.natemat.pl/2fe742969330c323b0577fa489ee1187,1500,0,0,0.webp",
+            "available": 10000
         },
 
         {
@@ -41,11 +44,12 @@
             "country": "Poland",
             "start": "01/04/2023",
             "end": "05/04/2023",
-            "price": "100",
+            "price": 100,
             "currency": "zł",
-            "max": "100",
+            "max": 100,
             "description": "A true Catholic have to make a pilgrimage to this holy place at least once in his life. Tesco store nearby",
-            "link": "https://www.podrozepoeuropie.pl/system/gallery/images/images/000/009/451/large/Figura-Jezusa-w-Swiebodzinie_2.JPG"
+            "link": "https://www.podrozepoeuropie.pl/system/gallery/images/images/000/009/451/large/Figura-Jezusa-w-Swiebodzinie_2.JPG",
+            "available": 100
         },
 
         {
@@ -53,11 +57,12 @@
             "country": "Poland",
             "start": "01/07/2023",
             "end": "31/07/2023",
-            "price": "4000",
+            "price": 4000,
             "currency": "zł",
-            "max": "20",
+            "max": 20,
             "description": "The city of dreams and desires. We can only imagine what's going on there. Time to change that",
-            "link": "https://bi.im-g.pl/im/8e/24/1a/z27411342AMP,Przebudowa-ul--Malachowskiego-w-Sosnowcu-potrwa-dl.jpg"
+            "link": "https://bi.im-g.pl/im/8e/24/1a/z27411342AMP,Przebudowa-ul--Malachowskiego-w-Sosnowcu-potrwa-dl.jpg",
+            "available": 20
         },
 
         {
@@ -65,11 +70,12 @@
             "country": "UK",
             "start": "13/03/2023",
             "end": "14/03/2023",
-            "price": "6000",
+            "price": 6000,
             "currency": "zł",
-            "max": "15",
+            "max": 15,
             "description": "The longest town name in Europe. What does it even mean? Time to visit this place!",
-            "link": "https://i.ytimg.com/vi/DUGN-12HHwQ/maxresdefault.jpg"
+            "link": "https://i.ytimg.com/vi/DUGN-12HHwQ/maxresdefault.jpg",
+            "available": 15
         },
 
         {
@@ -77,11 +83,12 @@
             "country": "USA",
             "start": "12/04/2025",
             "end": "12/04/2025",
-            "price": "7000",
+            "price": 7000,
             "currency": "zł",
-            "max": "200",
+            "max": 200,
             "description": "Would you like to see an alien and discover the truth? Finally, the time has come",
-            "link": "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2019/09/area-51-feature.jpg"
+            "link": "https://cropper.watch.aetnd.com/cdn.watch.aetnd.com/sites/2/2019/09/area-51-feature.jpg",
+            "available": 200
         },
 
         {
@@ -89,11 +96,12 @@
             "country": "Ukraine",
             "start": "12/01/2023",
             "end": "12/07/2023",
-            "price": "70",
+            "price": 70,
             "currency": "zł",
-            "max": "80",
+            "max": 80,
             "description": "Crimea is Ukrainian. Always has been. Let's volunteer and fight for freedom!",
-            "link": "https://image.cnbcfm.com/api/v1/image/107131449-1665234234849-gettyimages-1243812301-AFP_32KY6W2.jpeg"
+            "link": "https://image.cnbcfm.com/api/v1/image/107131449-1665234234849-gettyimages-1243812301-AFP_32KY6W2.jpeg",
+            "available": 80
         },
 
         {
@@ -101,11 +109,12 @@
             "country": "Slovakia",
             "start": "12/02/2023",
             "end": "13/02/2023",
-            "price": "350",
+            "price": 350,
             "currency": "zł",
-            "max": "15",
+            "max": 15,
             "description": "Are you run out of beer bottles? No problem. We've got something better. Come with us to Slovakia",
-            "link": "https://www.kofola.cz/kofolafiles/facebooks/99010699_614901959373136_3249503059935494144_n.jpg"
+            "link": "https://www.kofola.cz/kofolafiles/facebooks/99010699_614901959373136_3249503059935494144_n.jpg",
+            "available": 15
         },
 
         {
@@ -113,11 +122,12 @@
             "country": "Unknown",
             "start": "02/03/2024",
             "end": "09/03/2024",
-            "price": "10000",
+            "price": 10000,
             "currency": "zł",
-            "max": "5",
+            "max": 5,
             "description": "Don't know where you to go? We will decide for you :)",
-            "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUxm-ZDwCptaW3ZHt32krjiIuICVsCmeJcYl8qVvjQf8hm-bWw7xBiRWAmo9_56if7LM&usqp=CAU"
+            "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUxm-ZDwCptaW3ZHt32krjiIuICVsCmeJcYl8qVvjQf8hm-bWw7xBiRWAmo9_56if7LM&usqp=CAU",
+            "available": 5
         }
     ]
 }

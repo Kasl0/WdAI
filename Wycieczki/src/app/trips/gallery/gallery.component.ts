@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
 import { Trip } from '../../tripClass';
 
 @Component({
@@ -6,16 +6,19 @@ import { Trip } from '../../tripClass';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent {
+export class GalleryComponent implements OnChanges {
 
   @Input() trips: Trip[] = [];
   
   @Output() summaryCount: EventEmitter<number> = new EventEmitter<number>();
+  @Output() removeTrip: EventEmitter<Trip> = new EventEmitter<Trip>();
 
   minPrice: number = Number.MAX_SAFE_INTEGER;
   maxPrice: number = 0;
 
-  constructor() {
+  constructor() {}
+
+  ngOnChanges() {
     this.updateMinMax();
   }
 
@@ -40,20 +43,15 @@ export class GalleryComponent {
   }
 
   getRemaining(trip: Trip):string {
-    return String(trip.max - trip.counter);
+    return String(trip.available - trip.counter);
   }
 
   remove(trip: Trip):void {
-    for (let i=0 ; i < this.trips.length ; i++) {
-      if (this.trips[i] == trip) {
-
-        this.summaryCount.emit(-trip.counter);
-        this.trips.splice(i, 1);
-        this.updateMinMax();
-        break;
-        
-      }
-    }
+    this.summaryCount.emit(-trip.counter);
+    this.removeTrip.emit(trip);
+    this.updateMinMax();  
   }
+    
+  
 
 }

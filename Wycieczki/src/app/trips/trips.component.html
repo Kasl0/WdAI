@@ -3,5 +3,5 @@
     <div> {{ counter }} </div>
 </div>
 
-<app-gallery [trips]="tripList" (summaryCount)="updateCounter($event)"></app-gallery>
+<app-gallery [trips]="tripList" (removeTrip)="removeTrip($event)" (summaryCount)="updateCounter($event)"></app-gallery>
 <app-form (addTrip)="addTrip($event)"></app-form>
