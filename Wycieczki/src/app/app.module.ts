@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TripsComponent } from './trips/trips.component';
 import { GalleryComponent } from './trips/gallery/gallery.component';
 import { FormComponent } from './trips/form/form.component';
+import { BasketComponent } from './trips/basket/basket.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB6DKPN-YOc4JAV8wBflHATJNlubc29eQ8",
@@ -24,7 +25,8 @@ const firebaseConfig = {
     AppComponent,
     TripsComponent,
     GalleryComponent,
-    FormComponent
+    FormComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,3 @@
-<div class="box counter" [ngStyle]="{'background-color': counter > 10 ? 'green' : 'red' }">
-    <div> Zarezerwowanych łącznie: </div> 
-    <div> {{ counter }} </div>
-</div>
-
-<app-gallery [trips]="tripList" (removeTrip)="removeTrip($event)" (summaryCount)="updateCounter($event)"></app-gallery>
+<app-basket [counter]="counter" [sum]="sum"></app-basket>
+<app-gallery [trips]="tripList" (removeTrip)="removeTrip($event)" (updateBasket)="updateBasket($event)"></app-gallery>
 <app-form (addTrip)="addTrip($event)"></app-form>

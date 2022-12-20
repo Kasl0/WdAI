@@ -10,6 +10,7 @@ import { Trip } from '../tripClass';
 export class TripsComponent {
 
   counter: number = 0;
+  sum: number = 0;
   tripList: Trip[] = [];
 
   constructor(private service: TripsService) {
@@ -23,8 +24,9 @@ export class TripsComponent {
     });
   }
 
-  updateCounter(n: number) {
-    this.counter += n;
+  updateBasket(data: {trip: Trip, quantity: number}) {
+    this.counter += data.quantity;
+    this.sum += data.trip.price;
   }
 
   addTrip(newTrip: Trip) {
