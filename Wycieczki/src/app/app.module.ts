@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './trips/history/history.component';
+import { TripComponent } from './trips/trip/trip.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB6DKPN-YOc4JAV8wBflHATJNlubc29eQ8",
@@ -33,7 +34,8 @@ const firebaseConfig = {
     BasketComponent,
     PageNotFoundComponent,
     HomeComponent,
-    HistoryComponent
+    HistoryComponent,
+    TripComponent
   ],
   imports: [
     BrowserModule,

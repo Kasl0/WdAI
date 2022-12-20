@@ -1,9 +1,11 @@
-<div class="gallery">
-    <div class="card" *ngFor="let trip of trips"
-    [ngStyle]="{'border': trip.price == minPrice ? '2px solid red' : ( trip.price == maxPrice ? '2px solid green' : '2px solid white') }">
-        <div [routerLink]="'/trip/' + trip.name" routerLinkActive="active" class="circle">
-            <img [src]="trip.link">
+<div *ngFor="let trip of tripList">
+
+    <div class="card" *ngIf="trip.name == name">
+
+        <div>
+            <img [src]="trip.link" height="400px">
         </div>
+        
         <div class="content">
             <h1> {{ trip.name | uppercase }} </h1>
             <h2> {{ trip.country | uppercase}} </h2>
@@ -28,7 +30,8 @@
                     }}
                 </p>
             </div>
-            <button class="remove" (click)="remove(trip)"> Remove </button>
         </div>
+
     </div>
+
 </div>

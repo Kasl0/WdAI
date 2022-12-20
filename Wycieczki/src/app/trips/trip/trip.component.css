@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 30px 40px 0 40px;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.5em #7b7b7b61;
+    width: max-content;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.content > h1 {
+    font-size: 1.34em;
+    margin-bottom: 0.2em;
+}
+
+.content > h2 {
+    color: rgb(174, 13, 227);
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.content > p {
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+.select {
+    display: flex;
+    position: relative;
+    left: 70%;
+    width: 30%;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.select > button {
+    width: 2em;
+    height: 2em;
+}
+
+.msg {
+    text-align: end;
+    font-size: 0.8em;
+    margin-top: 0.4em;
+}
