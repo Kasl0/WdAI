@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 40px;
+}
+  
+main {
+    display: grid;
+    grid-template-areas: "offer offer"
+    "contact map";
+    margin: auto;
+    gap: 20px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+  
+section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#offer {
+    grid-area: offer;
+}
+
+#contact {
+    grid-area: contact;
+}
+
+#map {
+    grid-area: map;
+}
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}

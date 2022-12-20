@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TripsService } from 'src/app/trips.service';
 import { Trip } from '../../tripClass';
 
 @Component({
@@ -11,9 +12,7 @@ export class FormComponent{
 
   modelForm : FormGroup;
 
-  @Output() addTrip: EventEmitter<Trip> = new EventEmitter<Trip>();
-
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : FormBuilder, private service: TripsService) {
 
     this.modelForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -33,6 +32,8 @@ export class FormComponent{
     let newTrip: Trip = new Trip(form.value.name, form.value.country, form.value.start, form.value.end,
       form.value.price, form.value.currency, form.value.max, form.value.description, form.value.link);
 
-    this.addTrip.emit(newTrip);
+    this.service.addTrip(newTrip);
+
+    form.reset();
   }
 }

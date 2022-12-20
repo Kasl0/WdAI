@@ -29,10 +29,6 @@ export class TripsComponent {
     this.sum += data.trip.price;
   }
 
-  addTrip(newTrip: Trip) {
-    this.service.addTrip(newTrip);
-  }
-
   removeTrip(trip: Trip) {
     this.service.removeTrip(trip);
   }

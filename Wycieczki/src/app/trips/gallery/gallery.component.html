@@ -21,15 +21,14 @@
                 </div>
                 <p class="msg" [ngStyle]="{'color': trip.available - trip.counter > 3 ? 'rgb(118, 118, 118)' : 'red' }">
                     {{
-                        trip.available - trip.counter == trip.max ? "Dostępne wszystkie miejsca" :
-                        (trip.available - trip.counter > 4 ? "Zostało " + getRemaining(trip) + " miejsc" :
-                        (trip.available - trip.counter > 1 ?  "Zostały " + getRemaining(trip) + " miejsca" :
-                        (trip.available - trip.counter == 1 ? "Zostało 1 miejsce" :
-                        "Brak miejsc" )))
+                        trip.available - trip.counter == trip.max ? "All places available" :
+                        (trip.available - trip.counter > 1 ? getRemaining(trip) + " places left" :
+                        (trip.available - trip.counter == 1 ? "1 place left" :
+                        "No places available" ))
                     }}
                 </p>
             </div>
-            <button class="remove" (click)="remove(trip)"> Usuń </button>
+            <button class="remove" (click)="remove(trip)"> Remove </button>
         </div>
     </div>
 </div>

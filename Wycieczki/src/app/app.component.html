@@ -1,1 +1,34 @@
-<app-trips></app-trips>
+<nav>
+
+  <div class="menu">
+    <div>
+      <a routerLink="/home" routerLinkActive="active"> Home </a>
+    </div>
+    <div>
+      <a routerLink="/trips" routerLinkActive="active"> Trips </a>
+    </div>
+    <div>
+      <a routerLink="/form" routerLinkActive="active"> Add trip </a>
+    </div>
+    <div>
+      <a routerLink="/basket" routerLinkActive="active"> Basket </a>
+    </div>
+    <div>
+      <a routerLink="/history" routerLinkActive="active"> History </a>
+    </div>
+  </div>
+  
+  <div class="info">
+    <div>
+      <p> Dane koszyka </p>
+    </div>
+    <div>
+      <img src="./../assets/notify.png" alt="Noifications" height="30px">
+    </div>
+    <div>
+      <p> Dane o użytkowniku </p>
+    </div>
+  </div>
+
+</nav>
+<router-outlet></router-outlet>
