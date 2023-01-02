@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { AppComponent } from './app.component';
 import { TripsComponent } from './trips/trips.component';
@@ -14,6 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { HistoryComponent } from './trips/history/history.component';
 import { TripComponent } from './trips/trip/trip.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB6DKPN-YOc4JAV8wBflHATJNlubc29eQ8",
@@ -35,7 +38,9 @@ const firebaseConfig = {
     PageNotFoundComponent,
     HomeComponent,
     HistoryComponent,
-    TripComponent
+    TripComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ const firebaseConfig = {
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig, 'Wycieczki'),
     AngularFireDatabaseModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

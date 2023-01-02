@@ -20,13 +20,22 @@
   
   <div class="info">
     <div>
-      <p> Dane koszyka </p>
+      <p> Basket info </p>
     </div>
     <div>
       <img src="./../assets/notify.png" alt="Noifications" height="30px">
     </div>
     <div>
-      <p> Dane o użytkowniku </p>
+      <a *ngIf="!user" routerLink="/login" routerLinkActive="active"> Login </a>
+    </div>
+    <div>
+      <a *ngIf="!user" routerLink="/register" routerLinkActive="active"> Register </a>
+    </div>
+    <div>
+      <p *ngIf="user" style="color: yellow;"> {{ user.displayName }} </p>
+    </div>
+    <div>
+      <a *ngIf="user" (click)="logout()"> Log out </a>
     </div>
   </div>
 

@@ -6,6 +6,8 @@ import { TripComponent } from './trips/trip/trip.component';
 import { FormComponent } from './trips/form/form.component'; 
 import { BasketComponent } from './trips/basket/basket.component';
 import { HistoryComponent } from './trips/history/history.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
@@ -15,6 +17,8 @@ const appRoutes: Routes = [
   { path: 'form', component: FormComponent }, 
   { path: 'basket', component: BasketComponent },
   { path: 'history', component: HistoryComponent },
+  { path: 'register', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -1,0 +1,14 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+    <label for="username"> Username: </label> <br>
+    <input type="text" id="username" name="username" formControlName="username"> <br>
+
+    <label for="email"> Email: </label> <br>
+    <input type="email" id="email" name="email" formControlName="email"> <br>
+
+    <label for="password"> Password: </label> <br>
+    <input type="password" id="password" name="password" formControlName="password"> <br> <br>
+
+    <input [disabled]="!modelForm.valid" type="submit" value="Submit">
+
+    <p class="msg"> {{ msg }} </p>
+</form>
