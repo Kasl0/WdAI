@@ -7,10 +7,10 @@
       <div>
         <a routerLink="/trips" routerLinkActive="active"> Trips </a>
       </div>
-      <div *ngIf="role=='admin'">
+      <div *ngIf="user.role=='admin'">
         <a routerLink="/admin" routerLinkActive="active" style="color: yellow;"> Admin view </a>
       </div>
-      <div *ngIf="role=='manager' || role=='admin'">
+      <div *ngIf="user.role=='manager' || user.role=='admin'">
         <a routerLink="/manager" routerLinkActive="active" style="color: yellow;"> Trip manager </a>
       </div>
       <!--<div>
@@ -28,16 +28,16 @@
       <div>
         <img src="./../assets/notify.png" alt="Noifications" height="30px">
       </div>-->
-      <div *ngIf="role=='guest'">
+      <div *ngIf="user.role=='guest'">
         <a routerLink="/login" routerLinkActive="active"> Login </a>
       </div>
-      <div *ngIf="role=='guest'">
+      <div *ngIf="user.role=='guest'">
         <a routerLink="/register" routerLinkActive="active"> Register </a>
       </div>
-      <div *ngIf="role!='guest'">
-        <p style="color: yellow;"> {{ user.displayName }} </p>
+      <div *ngIf="user.role!='guest'">
+        <p style="color: yellow;"> {{ user.username }} </p>
       </div>
-      <div *ngIf="role!='guest'">
+      <div *ngIf="user.role!='guest'">
         <a (click)="logout()"> Log out </a>
       </div>
     </div>

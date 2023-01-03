@@ -30,8 +30,25 @@ export class LoginComponent {
 
     this.afAuth.signInWithEmailAndPassword(email, password).then(() => {
 
-      this.router.navigate(['/home']);
+      const sub1 = this.service.getAuthState().subscribe(user => {
+
+        if (user) {
+          const sub2 = this.service.checkIfBanned(user.uid).subscribe(isBanned => {
+            if (isBanned) {
+              this.modelForm.reset();
+              this.msg = 'The user corresponding to the given email has been banned';
+              sub1.unsubscribe();
+              sub2.unsubscribe();
+              this.service.logout();
+            }
+            else {
+              this.router.navigate(['/home']);
+            }
+          });
+        }
   
+      });
+
     }).catch(error => {
 
       var errorCode = error.code;

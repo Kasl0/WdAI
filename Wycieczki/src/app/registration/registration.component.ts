@@ -32,7 +32,7 @@ export class RegistrationComponent {
 
     this.afAuth.createUserWithEmailAndPassword(email, password).then(() => {
 
-      this.updateUsernameAndRole(username, "client");
+      this.updateUsernameAndRole(username);
       this.router.navigate(['/home']);
     
     }).catch(error => {
@@ -62,13 +62,13 @@ export class RegistrationComponent {
 
   }
 
-  updateUsernameAndRole(username: string, role: string) {
+  updateUsernameAndRole(username: string) {
     this.afAuth.currentUser.then(user => {
       if (user) {
-        user.updateProfile({
-          displayName: username
-        });
-        this.service.addUserRole(user.uid, role);
+        this.service.updateUser(user.uid, "id", user.uid);
+        this.service.updateUser(user.uid, "username", username);
+        this.service.updateUser(user.uid, "role", "client");
+        this.service.updateUser(user.uid, "isBanned", false);
       }
     });
   }

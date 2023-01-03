@@ -17,12 +17,20 @@ export class UsersService {
     return this.afAuth.authState;
   }
 
-  getUserRole(userid: string) {
-    return this.db.object(`roles/${userid}/role`).valueChanges();
+  getUser(userid: string) {
+    return this.db.object<any>(`users/${userid}`).valueChanges();
   }
 
-  addUserRole(userid: string, role: string) {
-    this.db.list('roles').update(userid, {"role": role});
+  updateUser(userid: string, property: string, value: any) {
+    this.db.list('users').update(userid, {[property]: value});
+  }
+
+  checkIfBanned(userid: string) {
+    return this.db.object<boolean>(`users/${userid}/isBanned`).valueChanges();
+  }
+
+  getAllUsers() {
+    return this.db.list<any>('users').valueChanges();
   }
 
   logout() {

@@ -15,21 +15,18 @@ export class TripsComponent {
   tripList: Trip[] = [];
 
   user: any;
-  role: string = "guest";
 
   constructor(private service: TripsService, private service2: UsersService) {
 
     this.service2.getAuthState().subscribe(user => {
 
-      this.user = user;
-
       if (user) {
-        this.service2.getUserRole(this.user.uid).subscribe(role => {
-          this.role = String(role);
+        this.service2.getUser(user.uid).subscribe(userInfo => {
+          this.user = userInfo;
         });
       } 
       else {
-        this.role = "guest";
+        this.user = {username: "", role: "guest"};
       }
 
     });

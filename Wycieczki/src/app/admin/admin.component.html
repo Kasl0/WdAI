@@ -13,3 +13,35 @@
         None
     </label>
 </div>
+<br>
+<div class="users-accounts">
+    <h2> User accounts </h2>
+    <table>
+        <thead>
+          <tr>
+            <th> Username </th>
+            <th> Role </th>
+            <th> Banned </th>
+            <th> Actions </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td> <input type="text" [(ngModel)]="user.username"> </td>
+            <td>
+                <select [(ngModel)]="user.role">
+                    <option value="admin"> Admin </option>
+                    <option value="manager"> Manager </option>
+                    <option value="client"> Client </option>
+                </select>
+            </td>
+            <td>
+              <input type="checkbox" [(ngModel)]="user.isBanned">
+            </td>
+            <td>
+              <button (click)="updateUser(user)"> Update </button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>

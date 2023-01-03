@@ -1,10 +1,10 @@
 <div class="gallery">
     <div class="card" *ngFor="let trip of trips"
     [ngStyle]="{'border': trip.price == minPrice ? '2px solid red' : ( trip.price == maxPrice ? '2px solid green' : '2px solid white') }">
-        <div *ngIf="role!='guest'" [routerLink]="'/trip/' + trip.name" routerLinkActive="active" class="circle">
+        <div *ngIf="user.role!='guest'" [routerLink]="'/trip/' + trip.name" routerLinkActive="active" class="circle">
             <img [src]="trip.link">
         </div>
-        <div *ngIf="role=='guest'" class="circle" style="cursor: default;">
+        <div *ngIf="user.role=='guest'" class="circle" style="cursor: default;">
             <img [src]="trip.link">
         </div>
         <div class="content">
@@ -16,7 +16,7 @@
             <p> <strong> Max participants: </strong> {{ trip.max }} </p>
             <p> <strong> Description: </strong> </p>
             <p> {{ trip.description }} </p>
-            <div *ngIf="role!='guest'" class="selectContainer">
+            <div *ngIf="user.role!='guest'" class="selectContainer">
                 <div class="select">
                     <button (click)="resign(trip)" [disabled]="trip.counter == 0">-</button>
                     <div> {{ trip.counter }} </div>
@@ -31,7 +31,7 @@
                     }}
                 </p>
             </div>
-            <button *ngIf="role=='manager' || role=='admin'" class="remove" (click)="remove(trip)"> Remove </button>
+            <button *ngIf="user.role=='manager' || user.role=='admin'" class="remove" (click)="remove(trip)"> Remove </button>
         </div>
     </div>
 </div>

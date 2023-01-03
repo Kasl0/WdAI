@@ -9,22 +9,19 @@ import { UsersService } from '../users.service';
 export class HeaderComponent {
 
   title = 'Bydgoszcz Travel Agency';
-  user: any;
-  role: string = "guest";
+  user = {username: "", role: "guest"};
 
   constructor(private service: UsersService) {
 
     this.service.getAuthState().subscribe(user => {
 
-      this.user = user;
-
       if (user) {
-        this.service.getUserRole(this.user.uid).subscribe(role => {
-          this.role = String(role);
+        this.service.getUser(user.uid).subscribe(userInfo => {
+          this.user = userInfo;
         });
       } 
       else {
-        this.role = "guest";
+        this.user = {username: "", role: "guest"};
       }
 
     });
