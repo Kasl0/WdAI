@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TripsService } from '../trips.service';
 import { Trip } from '../tripClass';
+import { UsersService } from 'src/app/users.service';
 
 @Component({
   selector: 'app-trips',
@@ -13,7 +14,25 @@ export class TripsComponent {
   sum: number = 0;
   tripList: Trip[] = [];
 
-  constructor(private service: TripsService) {
+  user: any;
+  role: string = "guest";
+
+  constructor(private service: TripsService, private service2: UsersService) {
+
+    this.service2.getAuthState().subscribe(user => {
+
+      this.user = user;
+
+      if (user) {
+        this.service2.getUserRole(this.user.uid).subscribe(role => {
+          this.role = String(role);
+        });
+      } 
+      else {
+        this.role = "guest";
+      }
+
+    });
 
     this.service.getTrips().subscribe(trips => {
       this.tripList = trips;
@@ -22,7 +41,10 @@ export class TripsComponent {
         trip.counter = 0;
       }
     });
+
   }
+
+  
 
   updateBasket(data: {trip: Trip, quantity: number}) {
     this.counter += data.quantity;

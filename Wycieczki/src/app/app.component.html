@@ -8,34 +8,34 @@
       <a routerLink="/trips" routerLinkActive="active"> Trips </a>
     </div>
     <div>
-      <a routerLink="/form" routerLinkActive="active"> Add trip </a>
+      <a *ngIf="role=='manager' or role=='admin'" routerLink="/form" routerLinkActive="active" style="color: yellow;"> Add trip </a>
     </div>
-    <div>
+    <!--<div>
       <a routerLink="/basket" routerLinkActive="active"> Basket </a>
     </div>
     <div>
       <a routerLink="/history" routerLinkActive="active"> History </a>
-    </div>
+    </div>-->
   </div>
   
   <div class="info">
-    <div>
+    <!--<div>
       <p> Basket info </p>
     </div>
     <div>
       <img src="./../assets/notify.png" alt="Noifications" height="30px">
+    </div>-->
+    <div>
+      <a *ngIf="role=='guest'" routerLink="/login" routerLinkActive="active"> Login </a>
     </div>
     <div>
-      <a *ngIf="!user" routerLink="/login" routerLinkActive="active"> Login </a>
+      <a *ngIf="role=='guest'" routerLink="/register" routerLinkActive="active"> Register </a>
     </div>
     <div>
-      <a *ngIf="!user" routerLink="/register" routerLinkActive="active"> Register </a>
+      <p *ngIf="role!='guest'" style="color: yellow;"> {{ user.displayName }} </p>
     </div>
     <div>
-      <p *ngIf="user" style="color: yellow;"> {{ user.displayName }} </p>
-    </div>
-    <div>
-      <a *ngIf="user" (click)="logout()"> Log out </a>
+      <a *ngIf="role!='guest'" (click)="logout()"> Log out </a>
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
 import { Trip } from '../../tripClass';
+import { UsersService } from 'src/app/users.service';
 
 @Component({
   selector: 'app-gallery',
@@ -16,7 +17,27 @@ export class GalleryComponent implements OnChanges {
   minPrice: number = Number.MAX_SAFE_INTEGER;
   maxPrice: number = 0;
 
-  constructor() {}
+  user: any;
+  role: string = "guest";
+
+  constructor(private service: UsersService) {
+
+    this.service.getAuthState().subscribe(user => {
+
+      this.user = user;
+
+      if (user) {
+        this.service.getUserRole(this.user.uid).subscribe(role => {
+          this.role = String(role);
+        });
+      } 
+      else {
+        this.role = "guest";
+      }
+
+    });
+
+  }
 
   ngOnChanges() {
     this.updateMinMax();

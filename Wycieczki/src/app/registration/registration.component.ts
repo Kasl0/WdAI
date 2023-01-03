@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,7 +14,7 @@ export class RegistrationComponent {
   modelForm : FormGroup;
   msg: string = "";
 
-  constructor(private formBuilder : FormBuilder, private afAuth: AngularFireAuth, private router: Router) {
+  constructor(private formBuilder : FormBuilder, private afAuth: AngularFireAuth, private router: Router, private service: UsersService) {
 
     this.modelForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
@@ -31,7 +32,7 @@ export class RegistrationComponent {
 
     this.afAuth.createUserWithEmailAndPassword(email, password).then(() => {
 
-      this.updateUsername(username);
+      this.updateUsernameAndRole(username, "client");
       this.router.navigate(['/home']);
     
     }).catch(error => {
@@ -61,12 +62,13 @@ export class RegistrationComponent {
 
   }
 
-  updateUsername(username: string) {
+  updateUsernameAndRole(username: string, role: string) {
     this.afAuth.currentUser.then(user => {
       if (user) {
         user.updateProfile({
           displayName: username
         });
+        this.service.addUserRole(user.uid, role);
       }
     });
   }

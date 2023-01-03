@@ -1,2 +1,2 @@
-<app-basket [counter]="counter" [sum]="sum"></app-basket>
+<app-basket *ngIf="role!='guest'" [counter]="counter" [sum]="sum"></app-basket>
 <app-gallery [trips]="tripList" (removeTrip)="removeTrip($event)" (updateBasket)="updateBasket($event)"></app-gallery>

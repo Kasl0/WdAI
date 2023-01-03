@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +8,31 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AppComponent {
 
-  title = 'Wycieczki';
+  title = 'Bydgoszcz Travel Agency';
   user: any;
+  role: string = "guest";
 
-  constructor(private afAuth: AngularFireAuth) {
-    this.afAuth.authState.subscribe(user => {
+  constructor(private service: UsersService) {
+
+    this.service.getAuthState().subscribe(user => {
+
       this.user = user;
+
+      if (user) {
+        this.service.getUserRole(this.user.uid).subscribe(role => {
+          this.role = String(role);
+        });
+      } 
+      else {
+        this.role = "guest";
+      }
+
     });
+
   }
 
   logout() {
-    this.afAuth.signOut();
+    this.service.logout();
   }
 
 }
