@@ -46,8 +46,4 @@ export class TripsComponent {
     if (data.quantity > 0) this.sum += data.trip.price;
     else this.sum -= data.trip.price;
   }
-
-  removeTrip(trip: Trip) {
-    this.service.removeTrip(trip);
-  }
 }

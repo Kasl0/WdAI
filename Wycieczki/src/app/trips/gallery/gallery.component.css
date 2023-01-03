@@ -79,16 +79,22 @@
 .select > button {
     width: 2em;
     height: 2em;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.select > button:hover {
+    background-color: #444;
 }
 
 .msg {
     text-align: end;
     font-size: 0.8em;
     margin-top: 0.4em;
-}
-
-.remove {
-    position: absolute;
-    top: 270px;
-    left: 30px;
 }

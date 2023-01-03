@@ -7,7 +7,114 @@ form {
     box-shadow: 0.5em 0.5em 0.5em #7b7b7b61;
 }
 
-input {
+form > input {
     margin-bottom: 1em;
     width: 70%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 2em;
+}
+
+.card {
+    position: relative;
+    box-sizing: content-box;
+    width: 20em;
+    height: 35em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.5em #7b7b7b61;
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.circle > img {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    height: 200px;
+    right: 50px;
+}
+
+.content {
+    position: absolute;
+    top: 220px;
+    padding: 1.2em;
+}
+
+.content > h1 {
+    font-size: 1.34em;
+    margin: 0;
+    margin-bottom: 0.2em;
+}
+
+.content > h2 {
+    color: rgb(174, 13, 227);
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.content > p {
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+.selectContainer {
+    position: absolute;
+    top: 270px;
+    right: 30px;
+    width: 100%;
+}
+
+.select {
+    display: flex;
+    position: relative;
+    left: 70%;
+    width: 30%;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.select > button {
+    width: 2em;
+    height: 2em;
+}
+
+.msg {
+    text-align: end;
+    font-size: 0.8em;
+    margin-top: 0.4em;
+}
+
+.remove {
+    position: absolute;
+    top: 270px;
+    left: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.remove:hover {
+    background-color: #444;
 }

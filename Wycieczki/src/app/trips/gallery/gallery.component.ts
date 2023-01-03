@@ -12,7 +12,6 @@ export class GalleryComponent implements OnChanges {
   @Input() trips: Trip[] = [];
   
   @Output() updateBasket: EventEmitter<{trip: Trip, quantity: number}> = new EventEmitter<{trip: Trip, quantity: number}>();
-  @Output() removeTrip: EventEmitter<Trip> = new EventEmitter<Trip>();
 
   minPrice: number = Number.MAX_SAFE_INTEGER;
   maxPrice: number = 0;
@@ -62,12 +61,6 @@ export class GalleryComponent implements OnChanges {
 
   getRemaining(trip: Trip):string {
     return String(trip.available - trip.counter);
-  }
-
-  remove(trip: Trip):void {
-    this.updateBasket.emit({trip: trip, quantity: -trip.counter});
-    this.removeTrip.emit(trip);
-    this.updateMinMax();  
   }
   
 }
