@@ -7,7 +7,11 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class UsersService {
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {}
+  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
+    this.getPersistence().subscribe(value => {
+      this.afAuth.setPersistence(String(value));
+    });
+  }
 
   getAuthState() {
     return this.afAuth.authState;
@@ -23,5 +27,14 @@ export class UsersService {
 
   logout() {
     this.afAuth.signOut();
+  }
+
+  getPersistence() {
+    return this.db.object(`settings/persistence/value`).valueChanges();
+  }
+
+  setPersistence(value: string) {
+    this.db.list('settings').update("persistence", {"value": value});
+    this.afAuth.setPersistence(value);
   }
 }

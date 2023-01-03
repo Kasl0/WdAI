@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TripsService } from 'src/app/trips.service';
-import { Trip } from '../../tripClass';
+import { Trip } from '../tripClass';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  templateUrl: './manager.component.html',
+  styleUrls: ['./manager.component.css']
 })
-export class FormComponent{
+export class ManagerComponent{
 
   modelForm : FormGroup;
 

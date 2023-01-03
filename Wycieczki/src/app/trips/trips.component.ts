@@ -44,11 +44,10 @@ export class TripsComponent {
 
   }
 
-  
-
   updateBasket(data: {trip: Trip, quantity: number}) {
     this.counter += data.quantity;
-    this.sum += data.trip.price;
+    if (data.quantity > 0) this.sum += data.trip.price;
+    else this.sum -= data.trip.price;
   }
 
   removeTrip(trip: Trip) {

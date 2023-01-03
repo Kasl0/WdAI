@@ -72,7 +72,5 @@ export class GalleryComponent implements OnChanges {
     this.removeTrip.emit(trip);
     this.updateMinMax();  
   }
-    
   
-
 }

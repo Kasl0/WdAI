@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   modelForm : FormGroup;
   msg: string = "";
 
-  constructor(private formBuilder : FormBuilder, private afAuth: AngularFireAuth, private router: Router) {
+  constructor(private formBuilder : FormBuilder, private afAuth: AngularFireAuth, private router: Router, private service: UsersService) {
 
     this.modelForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.minLength(3)]],

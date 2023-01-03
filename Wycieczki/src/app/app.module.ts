@@ -8,7 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AppComponent } from './app.component';
 import { TripsComponent } from './trips/trips.component';
 import { GalleryComponent } from './trips/gallery/gallery.component';
-import { FormComponent } from './trips/form/form.component';
+import { ManagerComponent } from './manager/manager.component';
 import { BasketComponent } from './trips/basket/basket.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -17,6 +17,8 @@ import { HistoryComponent } from './trips/history/history.component';
 import { TripComponent } from './trips/trip/trip.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AdminComponent } from './admin/admin.component';
+import { HeaderComponent } from './header/header.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB6DKPN-YOc4JAV8wBflHATJNlubc29eQ8",
@@ -33,14 +35,16 @@ const firebaseConfig = {
     AppComponent,
     TripsComponent,
     GalleryComponent,
-    FormComponent,
+    ManagerComponent,
     BasketComponent,
     PageNotFoundComponent,
     HomeComponent,
     HistoryComponent,
     TripComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    AdminComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

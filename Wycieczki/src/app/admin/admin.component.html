@@ -1,0 +1,15 @@
+<div class="persistence-settings">
+    <h2> Persistence settings </h2>
+    <label>
+        <input type="radio" name="persistence" value="local" [(ngModel)]="persistence" (change)="setPersistence()">
+        Local
+    </label>
+    <label>
+        <input type="radio" name="persistence" value="session" [(ngModel)]="persistence" (change)="setPersistence()">
+        Session
+    </label>
+    <label>
+        <input type="radio" name="persistence" value="none" [(ngModel)]="persistence" (change)="setPersistence()">
+        None
+    </label>
+</div>

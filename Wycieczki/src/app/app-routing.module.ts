@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TripsComponent } from './trips/trips.component';
 import { TripComponent } from './trips/trip/trip.component';
-import { FormComponent } from './trips/form/form.component'; 
+import { AdminComponent } from './admin/admin.component';
+import { ManagerComponent } from './manager/manager.component'; 
 import { BasketComponent } from './trips/basket/basket.component';
 import { HistoryComponent } from './trips/history/history.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'trips', component: TripsComponent },
   { path: 'trip/:id', component: TripComponent },
-  { path: 'form', component: FormComponent }, 
+  { path: 'admin', component: AdminComponent },
+  { path: 'manager', component: ManagerComponent }, 
   { path: 'basket', component: BasketComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'register', component: RegistrationComponent },

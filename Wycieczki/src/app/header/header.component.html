@@ -1,0 +1,45 @@
+<nav>
+
+    <div class="menu">
+      <div>
+        <a routerLink="/home" routerLinkActive="active"> Home </a>
+      </div>
+      <div>
+        <a routerLink="/trips" routerLinkActive="active"> Trips </a>
+      </div>
+      <div *ngIf="role=='admin'">
+        <a routerLink="/admin" routerLinkActive="active" style="color: yellow;"> Admin view </a>
+      </div>
+      <div *ngIf="role=='manager' || role=='admin'">
+        <a routerLink="/manager" routerLinkActive="active" style="color: yellow;"> Trip manager </a>
+      </div>
+      <!--<div>
+        <a routerLink="/basket" routerLinkActive="active"> Basket </a>
+      </div>
+      <div>
+        <a routerLink="/history" routerLinkActive="active"> History </a>
+      </div>-->
+    </div>
+    
+    <div class="info">
+      <!--<div>
+        <p> Basket info </p>
+      </div>
+      <div>
+        <img src="./../assets/notify.png" alt="Noifications" height="30px">
+      </div>-->
+      <div *ngIf="role=='guest'">
+        <a routerLink="/login" routerLinkActive="active"> Login </a>
+      </div>
+      <div *ngIf="role=='guest'">
+        <a routerLink="/register" routerLinkActive="active"> Register </a>
+      </div>
+      <div *ngIf="role!='guest'">
+        <p style="color: yellow;"> {{ user.displayName }} </p>
+      </div>
+      <div *ngIf="role!='guest'">
+        <a (click)="logout()"> Log out </a>
+      </div>
+    </div>
+  
+</nav>
