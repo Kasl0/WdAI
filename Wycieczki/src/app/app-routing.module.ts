@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { TripsComponent } from './trips/trips.component';
 import { TripComponent } from './trips/trip/trip.component';
@@ -14,13 +15,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'trips', component: TripsComponent },
-  { path: 'trip/:id', component: TripComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'manager', component: ManagerComponent }, 
+  { path: 'trip/:id', component: TripComponent, canActivate: [AuthGuard] },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: 'manager', component: ManagerComponent, canActivate: [AuthGuard] }, 
   { path: 'basket', component: BasketComponent },
   { path: 'history', component: HistoryComponent },
-  { path: 'register', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegistrationComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -29,4 +30,6 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+  constructor(private guard: AuthGuard) {}
+}

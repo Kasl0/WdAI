@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
+  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth, private router: Router) {
     this.getPersistence().subscribe(value => {
       this.afAuth.setPersistence(String(value));
     });
@@ -35,6 +36,7 @@ export class UsersService {
 
   logout() {
     this.afAuth.signOut();
+    this.router.navigate(['/home']);
   }
 
   getPersistence() {
