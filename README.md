@@ -2,8 +2,8 @@
 
 1. [HTML & CSS](Lab1)
 2. [Responsive web design](Lab2)
-3. [Javascript](Lab3)
-4. [Angular](Lab4)
+3. [JavaScript](Lab3)
+4. [Angular & TypeScript](Lab4)
 5. [Routing, Firebase database](Lab5)
 6. [Authentication and authorization](Lab6)
 
